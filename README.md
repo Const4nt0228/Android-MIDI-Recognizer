@@ -9,3 +9,7 @@ https://github.com/kshoji/USB-MIDI-Driver
 https://github.com/kshoji/javax.sound.midi-for-Android
 
 wiki의 설명대로 gradle과 메니페스트에 추가해야함
+
+세션 시작부에 usb 초기화 수행해줘야함. 액티비티 끝나고는 ondestroy로 닫아야함
+        usbMidiSystem = new UsbMidiSystem(this);
+        usbMidiSystem.initialize();
