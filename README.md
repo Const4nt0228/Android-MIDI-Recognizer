@@ -4,3 +4,4 @@
 # How To Use
 kshoji 님의 usb-midi-driver를 사용하였습니다.
 https://github.com/kshoji/USB-MIDI-Driver
+https://github.com/kshoji/javax.sound.midi-for-Android
