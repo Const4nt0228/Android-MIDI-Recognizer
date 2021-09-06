@@ -4,6 +4,16 @@
 안드로이드에서도 midi 라이브러리가 있긴한데 java eclipse에서 만들던걸 그대로 가져오기위해서 javax.sound를 따로 구해서 사용함
 
 # How To Use
+
+사용하기 위해선 요런 케이블이 필요함 사진은 usb midi - c타입 케이블 
+
+![image](https://user-images.githubusercontent.com/66546156/132150207-02d33f98-be59-40e2-92bf-284912a17670.png)
+
+집에서 굴러다니는 usb midi 케이블(프린터 케이블과 동일함 usb b cable이라고 불리는듯)과 usb type c gender 연결해서 사용 
+
+Galaxy s10 으로는 잘 호환됨 피아노는 CASIO CDP-S90
+
+
 kshoji 님의 usb-midi-driver, android용 javax.sound,midi 를 사용
 
 https://github.com/kshoji/USB-MIDI-Driver
@@ -26,7 +36,7 @@ https://stackoverflow.com/questions/6937760/java-getting-input-from-midi-keyboar
 스레드 돌리는 용으로 asynktask이용
 
 output 되는 data는 다음과 같음 
-
+            //device.getDeviceInfo()  : 기기 이름
             //aMsg[0] = velocity
             //aMsg[1] = note
             //aMsg[2] = pressed much
@@ -73,6 +83,7 @@ public class RecordAudio extends AsyncTask<Void, Void, Void> {
                         // if code gets this far without throwing an exception
                         // print a success message
                         System.out.println(device.getDeviceInfo() + " Was Opened");
+                        //device 이름이 호출됨 
 
                         publishProgress();
                     } catch (MidiUnavailableException e) {
