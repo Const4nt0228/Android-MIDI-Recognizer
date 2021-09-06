@@ -34,6 +34,66 @@ output 되는 data는 다음과 같음
 음계만 뽑고싶다면 aMsg만 사용하면 되고 신디사이저용으로 개발할경우 aMsg[0] velocity를 크기(세기), aMsg[2] 를 입력시간으로 하면된다
 
 
+# AsyncTask : midiRecord
+
+public class RecordAudio extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... params) {
+
+
+
+            MidiDevice device;
+            MidiDevice.Info[] infos = MidiSystem.getMidiDeviceInfo();
+
+            while(started){
+                for (int i = 0; i < infos.length; i++) {
+                    try {
+                        device = MidiSystem.getMidiDevice(infos[i]);
+                        // does the device have any transmitters?
+                        // if it does, add it to the device list
+                        System.out.println(infos[i]);
+
+                        // get all transmitters
+                        List<Transmitter> transmitters = device.getTransmitters();
+                        // and for each transmitter
+
+                        for (int j = 0; j < transmitters.size(); j++) {
+                            // create a new receiver
+                            transmitters.get(j).setReceiver(
+                                    // using my own MidiInputReceiver
+                                    new MidiInputReceiver(device.getDeviceInfo().toString()));
+                        }
+
+                        Transmitter trans = device.getTransmitter();
+                        trans.setReceiver(new MidiInputReceiver(device.getDeviceInfo().toString()));
+
+                        // open each device
+                        device.open();
+                        // if code gets this far without throwing an exception
+                        // print a success message
+                        System.out.println(device.getDeviceInfo() + " Was Opened");
+
+                        publishProgress();
+                    } catch (MidiUnavailableException e) {
+                        Log.e("AudioRecord", "Recording Failed");
+                    }
+                }
+            }
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Void...params) {
+
+            ((TextView) ((Activity)mContext).findViewById(R.id.tx1)).setText(mds1);
+            ((TextView) ((Activity)mContext).findViewById(R.id.tx2)).setText(mds2);
+            ((TextView) ((Activity)mContext).findViewById(R.id.tx3)).setText(mds3);
+
+        }
+    }
+
+
 # UI
 
 ![image](https://user-images.githubusercontent.com/66546156/132149515-7c449879-cfad-4f36-865a-b952c9c843e9.png)
