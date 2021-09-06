@@ -12,6 +12,12 @@ https://github.com/kshoji/javax.sound.midi-for-Android
 
 wiki의 설명대로 gradle과 메니페스트에 추가해야함
 
+내부 코드는 stackoverflow 의 sjlevine29 코드 사용
+https://stackoverflow.com/users/912795/sjlevine29
+https://stackoverflow.com/questions/6937760/java-getting-input-from-midi-keyboard
+
+
+
 세션 시작부에 usb 초기화 수행해줘야함. 액티비티 끝나고는 ondestroy로 닫아야함
 
         usbMidiSystem = new UsbMidiSystem(this);
@@ -26,3 +32,10 @@ output 되는 data는 다음과 같음
             //aMsg[2] = pressed much
             
 음계만 뽑고싶다면 aMsg만 사용하면 되고 신디사이저용으로 개발할경우 aMsg[0] velocity를 크기(세기), aMsg[2] 를 입력시간으로 하면된다
+
+
+# UI
+
+![image](https://user-images.githubusercontent.com/66546156/132149515-7c449879-cfad-4f36-865a-b952c9c843e9.png)
+
+UI는 심플하게 구성함
