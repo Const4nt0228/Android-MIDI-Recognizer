@@ -34,7 +34,7 @@ output 되는 data는 다음과 같음
 음계만 뽑고싶다면 aMsg만 사용하면 되고 신디사이저용으로 개발할경우 aMsg[0] velocity를 크기(세기), aMsg[2] 를 입력시간으로 하면된다
 
 
-# AsyncTask : midiRecord
+# AsyncTask : midiRecord.java
 
 public class RecordAudio extends AsyncTask<Void, Void, Void> {
 
