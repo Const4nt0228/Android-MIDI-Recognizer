@@ -3,6 +3,12 @@
 
 안드로이드에서도 midi 라이브러리가 있긴한데 java eclipse에서 만들던걸 그대로 가져오기위해서 javax.sound를 따로 구해서 사용함
 
+https://source.android.com/devices/audio/midi?hl=ko
+
+https://github.com/philburk/android-midisuite
+
+위 깃헙 주소가 진짜 정리가 잘되있는데 너무 어려워서 코드가 쉬운 javax.sound.midi 불러와서 사용함 
+
 # How To Use
 
 사용하기 위해선 요런 케이블이 필요함 사진은 usb midi - c타입 케이블 
