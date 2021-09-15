@@ -39,7 +39,7 @@ https://stackoverflow.com/questions/6937760/java-getting-input-from-midi-keyboar
         usbMidiSystem = new UsbMidiSystem(this);
         usbMidiSystem.initialize();
 
-스레드 돌리는 용으로 asynktask이용
+스레드 돌리는 용으로 asynctask이용
 
 output 되는 data는 다음과 같음 
             //device.getDeviceInfo()  : 기기 이름
