@@ -28,9 +28,9 @@ https://github.com/kshoji/javax.sound.midi-for-Android
 
 wiki의 설명대로 gradle과 메니페스트에 추가해야함
 
-내부 코드는 stackoverflow 의 sjlevine29 코드 사용
-https://stackoverflow.com/users/912795/sjlevine29
-https://stackoverflow.com/questions/6937760/java-getting-input-from-midi-keyboard
+내부 코드는 stackoverflow 의 sjlevine29 코드 사용  
+https://stackoverflow.com/users/912795/sjlevine29  
+https://stackoverflow.com/questions/6937760/java-getting-input-from-midi-keyboard  
 
 
 
