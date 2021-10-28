@@ -42,11 +42,11 @@ https://stackoverflow.com/questions/6937760/java-getting-input-from-midi-keyboar
 스레드 돌리는 용으로 asynctask이용
 
 output 되는 data는 다음과 같음 
-            //device.getDeviceInfo()  : 기기 이름
-            //aMsg[0] = velocity
-            //aMsg[1] = note
-            //aMsg[2] = pressed much
-            
+```
+              //device.getDeviceInfo()  : 기기 이름
+              //aMsg[1] = note
+              //aMsg[2] = pressed much
+```            
 음계만 뽑고싶다면 aMsg만 사용하면 되고 신디사이저용으로 개발할경우 aMsg[0] velocity를 크기(세기), aMsg[2] 를 입력시간으로 하면된다
 
 
