@@ -1,17 +1,18 @@
 # Android-MIDI-Recognizer
-안드로이드 폰에서 전자피아노 MIDI Output을 입력받는 어플리케이션 응용하면 리듬게임, DDR, 신디사이저등에 활용가능
+안드로이드 폰에서 전자피아노 MIDI Output을 입력받는 어플리케이션. 응용하면 리듬게임, DDR, 신디사이저등에 활용가능
 
 안드로이드에서도 midi 라이브러리가 있긴한데 java eclipse에서 만들던걸 그대로 가져오기위해서 javax.sound를 따로 구해서 사용함
 
-https://source.android.com/devices/audio/midi?hl=ko
+https://source.android.com/devices/audio/midi?hl=ko  
 
-https://github.com/philburk/android-midisuite
+https://github.com/philburk/android-midisuite  
 
 위 깃헙 주소가 진짜 정리가 잘되있는데 너무 어려워서 코드가 쉬운 javax.sound.midi 불러와서 사용함 
 
+---
 # How To Use
 
-사용하기 위해선 요런 케이블이 필요함 사진은 usb midi - c타입 케이블 
++ 사용하기 위해선 요런 케이블이 필요함 사진은 usb midi - c타입 케이블 
 
 ![image](https://user-images.githubusercontent.com/66546156/132150207-02d33f98-be59-40e2-92bf-284912a17670.png)
 
@@ -19,8 +20,8 @@ https://github.com/philburk/android-midisuite
 
 Galaxy s10 으로는 잘 호환됨 피아노는 CASIO CDP-S90
 
-
-kshoji 님의 usb-midi-driver, android용 javax.sound,midi 를 사용
+---
++ kshoji 님의 usb-midi-driver, android용 javax.sound,midi 를 사용
 
 https://github.com/kshoji/USB-MIDI-Driver
 
