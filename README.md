@@ -118,4 +118,5 @@ public class RecordAudio extends AsyncTask<Void, Void, Void> {
 
 ![image](https://user-images.githubusercontent.com/66546156/132149515-7c449879-cfad-4f36-865a-b952c9c843e9.png)
 
-UI는 심플하게 구성함
+UI는 심플하게 구성
+start 누르면 asynctask 동작, textview에 
